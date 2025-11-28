@@ -1,0 +1,495 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    height: auto;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    background-color: #000000;
+}
+/*Background Wallpaper*/
+#wallpapercontainer{
+    width: 100%;
+    height: 103vh;
+    background-image: url(../Images/netflix_background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#actualcontainer{
+    width: 100%;
+    height: 103vh;
+    position: absolute;  
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.7px);
+}
+/*First Heading Container*/
+#firstcontainer{
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headcontainer{
+    width: 80vw;
+    height: 8vh;
+    background-color: transparent;
+    display: flex;
+}
+/*Netflix Logo...*/
+#headleftcontainer{
+    width: 10vw;
+    height: 4vh;
+    padding-top: 15px;
+}
+#headleftcontainer svg path {
+  fill: red;
+}
+
+/* Language Selection and SignIn Container///*/
+#headrightcontainer{
+    width: 70vw;
+    height: 8vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+}
+#rigthbasecontainer{
+    width: 16vw;
+    height: 6vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+#language{
+    height: 70%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 0.1px solid white;
+}
+#icon{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+select{
+    height: 100%;
+    width: 70%;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+}
+#signin{
+    height: 5vh;
+    width: 5.2vw;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+#signin:hover{
+    background-color: rgba(200, 19, 19, 0.975);
+    cursor: pointer;
+}
+/*Description Container*/
+#secondcontainer{
+    width: 100%;
+    height: 90vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+}
+#innercontainer{
+    width: 40vw;
+    height: 60vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.firstline{
+    font-size: 60px;
+}
+#secondline{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#thirdline{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.searchcontainer{
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input{
+    height: 80%;
+    width: 68%;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+input ::placeholder{
+    font-size: 40px;
+}
+.getstarted{
+    height: 80%;
+    width: 30%;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.getstarted:hover{
+    background-color: rgb(202, 34, 34);
+}
+
+/*The Central Border part*/
+#centralborder{
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+#centerbase{
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    z-index: 4;
+}
+/*Actual BorderLine*/
+#borderline{
+    width: 100%;
+    height: 8vh;
+    background-color: black;
+    border-radius: 50% 50% 0% 0% / 50% 50% 0% 0%; 
+    margin-top: -24px;
+    box-shadow: 0 0 20px 10px rgba(255, 0, 127, 0.7), 0px 0px 0px 0px rgba(255, 0, 0, 0.5); 
+}
+/*Scrolling Container*/
+#scrollcontainer{
+    width: 100%;
+    height: 58vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: -50px;
+    z-index: 6;
+}
+#containerheading{
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    display: block;
+    width: 30%;
+    background-color: transparent;
+    text-align: start;
+    position: relative;
+    left: -380px;
+    top: 45px;
+    z-index: 10;
+}
+#outerscrollcontainer{
+    width: 84vw;
+    height: 50vh;
+    background-color: transparent;
+    position: relative;
+    overflow-x: scroll;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+#innerscrollcontainer{
+    width: 150vw;
+    height: 40vh;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#outerscrollcontainer::-webkit-scrollbar {
+    display: none;
+}
+.card {
+    width: 12vw;
+    height: 90%;
+    margin-top: 70px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all 0.5s;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.number {
+    font-size: 7vw;
+    font-weight: 700;
+    font-style: normal;
+    -webkit-text-stroke: 1px white;
+    position: absolute;
+    top: 120px;
+    left: -20px;
+}
+/*Content Description*/
+/*First Content Description*/
+#descriptioncontainer{
+    width: 99vw;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: -30px;
+    z-index: 14;
+}
+#contentcontainer1{
+    width: 80vw;
+    height: 56vh;
+    background-color: transparent;
+}
+.contentheading{
+    width: 40vw;
+    height: 6vh;
+    background-color: transparent;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+}
+#outercontentcontainer{
+    height: 44vh;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contentbox{
+    height: 40vh;
+    width: 19vw;
+    background-image: linear-gradient(-30deg,rgb(53, 1, 53),rgba(4, 4, 49, 0.777));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 34px;
+}
+.lineone{
+    background-color: transparent;
+    color: white;
+    font-size: 26px;
+    padding-left: 10px;
+    padding-bottom: 20px
+}
+.linetwo{
+    background-color: transparent;
+    color: #ffffffb3;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.iconof{
+    font-size: 60px;
+    color: white;
+    display: flex;
+    position: relative;
+    top: 80px;
+    left: 210px;
+}
+/*Second Content Container*/
+#contentcontainer2{
+    width: 80vw;
+    height: auto;
+    background-color: transparent;
+}
+details {
+    width: 78.6vw;
+    padding-bottom: 8px;
+    background: transparent;
+    color: white;
+}
+details summary.title{
+    background: rgb(51, 50, 50);
+    height: 12vh;
+    transition: all 0.5s;
+}
+details summary.title:hover{
+    background-color: rgb(93, 92, 92);
+}
+summary.title {
+    width: 78.6vw;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background: rgb(51, 50, 50);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    border-bottom: 1px solid black;
+}
+details p{
+    width: 78.6vw;
+    color: white;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    background: rgb(51, 50, 50);
+}
+summary::after {
+  content: "➕"; 
+  color: #2f7d32;
+  font-size: 36px;
+  margin-right: 20px;
+  transition: all 0.3s;
+}
+details[open] summary::after {
+  content: "❌"; 
+  color: gray;
+}
+/*Last Section Contaiber With Search Bar*/
+#lastoutercontainer{
+    width: 98vw;
+    height: 24vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#lastinnercontainer{
+    width: 58vw;
+    height: 20vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 40px; */
+}
+#paraline{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*Footer information*/
+footer{
+    width: 99vw;
+    height: 80vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contentinformation{
+    width: 80vw;
+    height: 70vh;
+    background-color: transparent;
+}
+#call{
+    width: 50vw;
+    height: 10vh;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffffb3;
+}
+#centerinfo{
+    width: 80vw;
+    height: 26vh;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.contentfooterbox{
+    width: 18vw;
+    height: 30vh;
+    background-color: transparent;
+    display: flex;
+    margin-right: 30px;
+}
+.contentinfo{
+    width: 18vw;
+    height: 28vh;
+    background-color: transparent;
+}
+li{
+    width: 15vw;
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-right: 200px;
+}
+li a{
+    color: #ffffffb3;
+}
+#footerlanguage{
+    margin-top: -60px;
+    padding-right: -180px;
+}
+#rigthbasecontainer1{
+    width: 16vw;
+    height: 6vh;
+    margin-top: 40px;
+}
+#paraNetflix{
+    /* background-color: #2f7d32; */
+    color: #ffffffb3;
+    margin-top: 20px;
+    font-size: 14px;
+}
+#lastparaline{
+    color: gray;
+    margin-top: 30px;
+    font-size: 13px;
+    font-weight: bold;
+}
